@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionHeader renders correctly 1`] = `
+Array [
+  <h2>
+    Chuchu
+  </h2>,
+  <p
+    style={
+      Object {
+        "color": "#B0B8BA",
+      }
+    }
+  >
+    chuchu chu chuchu
+  </p>,
+]
+`;
