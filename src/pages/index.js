@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Button } from "grommet"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -17,6 +18,7 @@ const IndexPage = () => (
     <Hero />
     <Content />
     <Excerpt>Chuchu</Excerpt>
+    <Button primary label="label" />
     <CallToAction />
   </Layout>
 )
