@@ -9,4 +9,5 @@ export default {
 	blackBlue: '#1D11B2',
 	rose: '#FF66C4',
 	gray: '#6c6c6c',
+	browm: '#4c3426',
 };

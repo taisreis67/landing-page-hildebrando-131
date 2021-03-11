@@ -44,7 +44,7 @@ const Layout = ({ children }) => (
     render={data => (
       <Grommet theme={mainTheme}>
         <GlobalStyle />
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header siteTitle={data.site.siteMetadata.title} {...data} />
         <main>{children}</main>
         <Footer siteTitle={data.site.siteMetadata.title} />
       </Grommet>

@@ -5,6 +5,10 @@
   "version": "0.1.0",
   "author": "Kyle Gill <kyle.robert.gill@gmail.com>",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^2.1.37",
     "gatsby-image": "^2.0.34",
