@@ -10,4 +10,5 @@ export default {
 	rose: '#FF66C4',
 	gray: '#6c6c6c',
 	browm: '#4c3426',
+	gold: '#ffc695',
 };

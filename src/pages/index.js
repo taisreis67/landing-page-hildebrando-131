@@ -1,19 +1,16 @@
 import React from "react"
-import styled from "styled-components"
-import { Button } from "grommet"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
-const Excerpt = styled.p`
-  background-color: red;
-`
+import Banner from "../components/Banner"
+import bannerImage from "../images/residencial-hildebrando-131-osasco-parallax.jpg"
+import SectionTitle from "../components/SectionTitle"
 
 const IndexPage = () => (
   <Layout>
     <SEO />
-    <Excerpt>Chuchu</Excerpt>
-    <Button primary label="label" />
+    <Banner src={bannerImage} title="Fachada Hildebrando 131" />
+    <SectionTitle title="Lazer" />
   </Layout>
 )
 
