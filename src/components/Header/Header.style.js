@@ -6,6 +6,7 @@ import colors from '../../styles/colors'
 export const StyledHeader = styled(Header)`
 	z-index: 999;
 	position: relative;
+	background: ${colors.browm};
 `;
 
 export const StyledBrand = styled(Box)`
@@ -31,7 +32,7 @@ export const StyledNavbar = styled(Box)`
 	width: 100%;
 
 	a {
-		color: ${colors.browm};
+		color: ${colors.gold};
 
 		&:focus {
 			box-shadow: none;

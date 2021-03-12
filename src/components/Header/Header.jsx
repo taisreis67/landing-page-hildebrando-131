@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import PropTypes from "prop-types"
 import {
 	Anchor,
 	Collapsible,
@@ -48,7 +47,7 @@ const Header = ({ siteTitle }, data) => {
 					icon={<FontAwesomeIcon icon={faBars} size="2x"/>}
 					hoverIndicator
 					onClick={() => setOpen(!open)}
-					color={colors.browm}
+					color={colors.gold}
 					a11yTitle="botão para abrir o menu de navegação do site"
 					title="botão para abrir o menu de navegação do site"
 					alt="botão para abrir o menu de navegação do site"
@@ -131,14 +130,6 @@ const Header = ({ siteTitle }, data) => {
 			</Collapsible>
 		</StyledHeader>
 	);
-}
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
 }
 
 export default Header
