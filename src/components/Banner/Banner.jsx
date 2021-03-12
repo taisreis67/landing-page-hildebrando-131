@@ -1,8 +1,8 @@
 import React from "react"
-import { Image } from 'grommet'
+import { StyledImage } from './Banner.style'
 
 const Banner = ({ src, title }) => (
-  <Image
+  <StyledImage
     fit="cover"
     src={src}
     title={title}
