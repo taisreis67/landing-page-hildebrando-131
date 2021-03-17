@@ -10,9 +10,6 @@ import Footer from "./Footer"
 
 const mainTheme = deepMerge(grommet, {
 	heading: {
-		font: {
-			family: 'Open Sans'
-		},
 		weight: 400
 	},
 	anchor: {
@@ -23,9 +20,6 @@ const mainTheme = deepMerge(grommet, {
 			border: {
 				color: 'none'
 			}
-		},
-		font: {
-			family: 'Open Sans'
 		}
 	}
 });
