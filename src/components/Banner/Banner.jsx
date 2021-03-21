@@ -1,4 +1,5 @@
 import React from "react"
+
 import { StyledImage } from './Banner.style'
 
 const Banner = ({ src, title }) => (
