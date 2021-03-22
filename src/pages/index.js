@@ -6,7 +6,7 @@ import Banner from "../components/Banner"
 import bannerImage from "../images/residencial-hildebrando-131-osasco-parallax.jpg"
 import SectionTitle from "../components/SectionTitle"
 import Carousel from "../components/Carousel"
-// import Implantation from '../components/Implantation'
+import Implantation from '../components/Implantation'
 
 const IndexPage = () => (
   <Layout>
@@ -15,7 +15,7 @@ const IndexPage = () => (
     <SectionTitle title="Lazer" />
     <Carousel imagePath="recreation" />
     <SectionTitle title="Implantação" />
-    {/* <Implantation imageName="residencial-hildebrando-131-osasco-implantacao.png" title="Imagem da implantação do empreendimento" /> */}
+    <Implantation />
   </Layout>
 )
 
