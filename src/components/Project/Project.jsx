@@ -5,7 +5,7 @@ import { Box, Grid, ResponsiveContext } from "grommet"
 
 import { StyledProject } from './Project.style'
 
-const Implantation = ({ pathImage, video, colors }) => {
+const Project = ({ pathImage, video, colors }) => {
   const size = useContext(ResponsiveContext);
   const typeAreas = {
     small: [
@@ -45,8 +45,6 @@ const Implantation = ({ pathImage, video, colors }) => {
     }
   `)
 
-  console.log(data)
-
   return (
     <StyledProject pad={{ vertical: "large"}}>
       <Box width="xlarge" margin="auto" pad="medium">
@@ -83,4 +81,4 @@ const Implantation = ({ pathImage, video, colors }) => {
   )
 }
 
-export default Implantation
+export default Project

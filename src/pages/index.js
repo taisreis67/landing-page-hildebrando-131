@@ -9,6 +9,7 @@ import SectionTitle from "../components/SectionTitle"
 import Carousel from "../components/Carousel"
 import Implantation from '../components/Implantation'
 import Project from '../components/Project'
+import Plans from '../components/Plans'
 
 const IndexPage = () => {
   const projectColors = {
@@ -19,6 +20,11 @@ const IndexPage = () => {
   const projectVideo = {
     url: 'https://www.youtube.com/watch?v=PsJbTTN485o',
     title: 'Vídeo do empreendimento Hildebrando 131'
+  }
+
+  const plansColors = {
+    background: colors.beige,
+    color: colors.browm
   }
 
   return (
@@ -35,6 +41,9 @@ const IndexPage = () => {
 
       <SectionTitle title="Projeto" />
       <Project pathImage="project" video={projectVideo} colors={projectColors} />
+
+      <SectionTitle title="Plantas" />
+      <Plans pathImage="plans" colors={plansColors} />
     </Layout>
   )
 }
