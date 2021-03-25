@@ -12,6 +12,7 @@ import Implantation from '../components/Implantation'
 import Project from '../components/Project'
 import Plans from '../components/Plans'
 import Interactive from '../components/Interactive'
+import Location from '../components/Interactive'
 import contentPlans from "../content/plans.json"
 
 const IndexPage = ({ data }) => {
@@ -29,8 +30,6 @@ const IndexPage = ({ data }) => {
     background: colors.beige,
     color: colors.browm
   }
-
-  console.log(contentPlans.content);
 
   return (
     <Layout>
@@ -50,20 +49,20 @@ const IndexPage = ({ data }) => {
       <SectionTitle title={contentPlans.title} />
       <Plans images={data.plans} colors={plansColors} content={contentPlans.content} />
 
-      
+      <SectionTitle title="Tour Virtual" />
       <Interactive background={colors.darkBrowm}>
-        <SectionTitle title="Tour Virtual" />
-
         <iframe
-          src="https://www.3dexplora.com.br/seutour.aspx?codigo=q5kYoNLfgYv&amp;play=1&amp;hl=0&amp;qs=1&amp;wh=1&amp;lp=0&amp;ts=1"
+          src="https://www.3dexplora.com.br/seutour.aspx?codigo=q5kYoNLfgYv&amp;play=0&amp;hl=0&amp;qs=1&amp;wh=1&amp;lp=0&amp;ts=1"
           allowFullScreen=""
           width="100%"
           height="500px"
           frameBorder="0"
-          title="hildebrando 131 tour virtual"
+          title="Hildebrando 131 tour virtual"
         />
       </Interactive>
       
+      <SectionTitle title="Localização" />
+      <Location background={colors.beige} />
     </Layout>
   )
 }
