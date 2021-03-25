@@ -5,10 +5,9 @@ import imagesMock from "../../helpers/imagesMock"
 import colors from '../../styles/colors'
 import Plans from "."
 
-console.log(imagesMock.data);
-
 const content = [
   {
+    title: "Title test",
     area: "Area test",
     description: 'Description test',
     finals: "Finals test",
