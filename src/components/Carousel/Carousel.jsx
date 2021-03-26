@@ -1,35 +1,13 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { Box, Grid } from "grommet"
 
 import { StyledCarousel } from './Carousel.style'
 
-const Carousel = ({ imagePath }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      allFile(
-        filter: {
-          extension: { regex: "/(jpg)|(png)|(jpeg)/" }
-          relativeDirectory: { eq: "recreation" }
-        }
-      ) {
-        edges {
-          node {
-            base
-            childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
-
+const Carousel = ({ images, background, color }) => {
+  console.log(background)
   return (
-    <StyledCarousel pad={{ vertical: "large"}}>
+    <StyledCarousel pad={{ vertical: "large"}} background={background}>
       <Box width="xxlarge" margin="auto" pad="medium">
         <Grid
           columns="300px"
@@ -37,7 +15,7 @@ const Carousel = ({ imagePath }) => {
           align="stretch"
           gap="medium"
         >
-          {data.allFile.edges.map(image => (
+          {images.edges.map(image => (
             <Img
               fluid={image.node.childImageSharp.fluid}
               alt={image.node.base.split(".")[0]}

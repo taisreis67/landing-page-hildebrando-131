@@ -1,13 +1,14 @@
 import React from "react"
-import { render } from "@testing-library/react"
+import { render, screen } from "@testing-library/react"
 
+import imagesMock from "../../helpers/imagesMock"
+import colors from '../../styles/colors'
 import Carousel from "."
 
 describe("Carousel", () => {
-  it.skip("renders correctly", async () => {
-    render(<Carousel imagePath='recreation' />);
+  it("renders correctly", async () => {
+    render(<Carousel images={imagesMock.data.close} background={colors.beige} color={colors.darkBrowm} />)
 
-    const displayedImage = document.querySelector('img');
-    expect(displayedImage[0].src).toContain('recreation');
+    expect(screen.getByText(/Finals test/i)).toBeInTheDocument()
   })
 })
