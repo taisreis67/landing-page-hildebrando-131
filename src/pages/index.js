@@ -12,6 +12,7 @@ import Project from '../components/Project'
 import Plans from '../components/Plans'
 import Interactive from '../components/Interactive'
 import contentPlans from "../content/plans.json"
+import CentralImage from "../components/CentralImage"
 
 const IndexPage = ({ data }) => {
   const projectColors = {
@@ -37,6 +38,16 @@ const IndexPage = ({ data }) => {
   const locationImage = {
     fluid: data.location,
     description: 'Imagem da localização do empreendimento'
+  }
+
+  const realizationImages = {
+    small: {
+      fluid: data.realizationSmall,
+    },
+    medium: {
+      fluid: data.realizationMedium,
+    },
+    description: 'Imagem dos logos das empresas que contribuiram na realização do empreendimento'
   }
 
   return (
@@ -79,6 +90,9 @@ const IndexPage = ({ data }) => {
 
       <SectionTitle title="A facilidade de ter tudo ao seu lado" background={colors.browm} color={colors.gold} />
       <Carousel images={data.close} background={colors.beige} color={colors.darkBrowm} />
+
+      <SectionTitle title="Realização" background={colors.browm} color={colors.gold} />
+      <CentralImage images={realizationImages} background={colors.white} />
     </Layout>
   )
 }
@@ -132,6 +146,20 @@ export const query = graphql`
               ...GatsbyImageSharpFluid
             }
           }
+        }
+      }
+    }
+    realizationSmall: file(relativePath: { eq: "assinaturas-mobile.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    realizationMedium: file(relativePath: { eq: "assinaturas.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
