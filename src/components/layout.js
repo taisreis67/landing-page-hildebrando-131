@@ -5,6 +5,7 @@ import { Grommet, grommet } from 'grommet'
 import { deepMerge } from "grommet/utils"
 
 import { GlobalStyle } from '../styles/globalStyle'
+import colors from '../styles/colors'
 import Header from "./Header"
 import Footer from "./Footer"
 
@@ -40,7 +41,7 @@ const Layout = ({ children }) => (
         <GlobalStyle />
         <Header siteTitle={data.site.siteMetadata.title} {...data} />
         <main>{children}</main>
-        <Footer siteTitle={data.site.siteMetadata.title} />
+        <Footer background={colors.browm} color={colors.yellow} />
       </Grommet>
     )}
   />

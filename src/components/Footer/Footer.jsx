@@ -1,45 +1,27 @@
 import React from "react"
-import PropTypes from "prop-types"
+import { Box, Text } from "grommet";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
-const Footer = ({ siteTitle }) => (
-  <footer
-    style={{
-      padding: "1rem",
-    }}
-  >
-    <div
-      style={{
-        display: "grid",
-        alignItems: "center",
-        justifyContent: "space-between",
-        gridTemplateColumns: "repeat(auto-fit, minmax(200px, 240px))",
-        padding: "1rem 2rem",
-        fontSize: ".85rem",
-      }}
-    >
-      <div>
-        <a
-          style={{ textDecoration: "none" }}
-          href="https://github.com/gillkyle/gatsby-starter-landing-page"
-        >
-          Contact Us
-        </a>
-      </div>
-      <div>
-        © {new Date().getFullYear()}
-        {` `}
-        {siteTitle}
-      </div>
-    </div>
-  </footer>
-)
+import { StyledFooter, StyledAnchor } from './Footer.style'
 
-Footer.propTypes = {
-  siteTitle: PropTypes.string,
-}
+const Footer = ({ background, color }) => (
+  <StyledFooter background={background}>
+    <Box width="medium" margin="auto">
+      <StyledAnchor
+        href="https://api.whatsapp.com/send?phone=5511967147840"
+        target="blank"
+        color={color}
+      >
+        <FontAwesomeIcon
+          icon={faWhatsapp}
+          size="2x"
+        />
 
-Footer.defaultProps = {
-  siteTitle: ``,
-}
+        <Text textAlign="left" alignSelf="center" margin={{ left: 'small'}} color="#fff">Entre em contato para saber mais</Text>
+      </StyledAnchor>
+    </Box>
+  </StyledFooter>
+);
 
-export default Footer
+export default Footer;

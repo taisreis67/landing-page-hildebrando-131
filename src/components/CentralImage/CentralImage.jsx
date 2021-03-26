@@ -14,7 +14,7 @@ const CentralImage = ({ images, background }) => {
           alt={description}
         />
 
-        <Paragraph textAlign="center" fill={true} size="small"  margin={{ top: "large"}}>
+        <Paragraph textAlign="center" fill={true} size="small"  margin={{ vertical: "large"}}>
           A incorporação imobiliária do empreendimento foi registrado em 11/09/2020 sob a denominação "HILDEBRANDO-131", 
           conforme R.01 da matrícula nº 142.177 do Segundo Oficial de Registro de Imoveis de Osasco/SP. 
           Apesar de todo cuidado na obtenção das informações contidas neste folheto elas não devem ser consideradas 
