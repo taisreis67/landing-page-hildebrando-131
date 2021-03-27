@@ -14,20 +14,10 @@ import Interactive from '../components/Interactive'
 import contentPlans from "../content/plans.json"
 import CentralImage from "../components/CentralImage"
 
-const IndexPage = ({ data }) => {
-  const projectColors = {
-    background: colors.beige,
-    color: colors.darkBrowm
-  }
-
+const IndexPage = ({ data, location }) => {
   const plansColors = {
     background: colors.beige,
     color: colors.browm
-  }
-
-  const projectVideo = {
-    url: 'https://www.youtube.com/watch?v=PsJbTTN485o',
-    title: 'Vídeo do empreendimento Hildebrando 131'
   }
 
   const apresentationImage = {
@@ -51,7 +41,7 @@ const IndexPage = ({ data }) => {
   }
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO />
 
       <BannerImage image={apresentationImage} />
@@ -63,9 +53,9 @@ const IndexPage = ({ data }) => {
       <Implantation />
 
       <SectionTitle title="Projeto" background={colors.browm} color={colors.gold} />
-      <Project pathImage="project" video={projectVideo} colors={projectColors} />
+      <Project images={data.project} background={colors.browm} />
 
-      <SectionTitle title={contentPlans.title} background={colors.browm} color={colors.gold} />
+      <SectionTitle title="Plantas" background={colors.browm} color={colors.gold} />
       <Plans images={data.plans} colors={plansColors} content={contentPlans.content} />
 
       <SectionTitle title="Tour Virtual" background={colors.browm} color={colors.gold} />
@@ -107,6 +97,18 @@ export const query = graphql`
       }
     }
     recreation: allFile(filter: {extension: {regex: "/(jpg)|(png)|(jpeg)/"}, relativeDirectory: {eq: "recreation"}}, sort: {fields: base, order: ASC}) {
+      edges {
+        node {
+          base
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+    project: allFile(filter: {extension: {regex: "/(jpg)|(png)|(jpeg)/"}, relativeDirectory: {eq: "project"}}, sort: {fields: base, order: ASC}) {
       edges {
         node {
           base

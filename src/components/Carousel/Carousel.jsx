@@ -5,7 +5,6 @@ import { Box, Grid } from "grommet"
 import { StyledCarousel } from './Carousel.style'
 
 const Carousel = ({ images, background, color }) => {
-  console.log(background)
   return (
     <StyledCarousel pad={{ vertical: "large"}} background={background}>
       <Box width="xxlarge" margin="auto" pad="medium">

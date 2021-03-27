@@ -9,7 +9,7 @@ const Footer = ({ background, color }) => {
   const size = useContext(ResponsiveContext);
 
   return (
-    <StyledFooter background={background}>
+    <StyledFooter background={background} elevation="small">
       <Box width="medium" margin="auto">
         <StyledAnchor
           href="https://api.whatsapp.com/send?phone=5511967147840"

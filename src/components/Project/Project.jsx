@@ -1,11 +1,10 @@
 import React, { useContext } from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { Box, Grid, ResponsiveContext } from "grommet"
 
 import { StyledProject } from './Project.style'
 
-const Project = ({ pathImage, video, colors }) => {
+const Project = ({ images, background }) => {
   const size = useContext(ResponsiveContext);
   const typeAreas = {
     small: [
@@ -23,28 +22,6 @@ const Project = ({ pathImage, video, colors }) => {
   const rows = size !== 'small' ? ['fit', 'fit'] : ['auto', 'auto', 'auto']
   const columns = size !== 'small' ? ['1fr', '1fr'] : ['auto']
 
-  const data = useStaticQuery(graphql`
-    query {
-      allFile(
-        filter: {
-          extension: { regex: "/(jpg)|(png)|(jpeg)/" }
-          relativeDirectory: { eq: "project" }
-        }
-      ) {
-        edges {
-          node {
-            base
-            childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <StyledProject pad={{ vertical: "large"}}>
       <Box width="xlarge" margin="auto" pad="medium">
@@ -57,21 +34,21 @@ const Project = ({ pathImage, video, colors }) => {
         >
           <Box gridArea="building" justify="center">
             <Img
-              fluid={data.allFile.edges[1].node.childImageSharp.fluid}
+              fluid={images.edges[2].node.childImageSharp.fluid}
               alt="Imagem do prédio do empreendimento"
             />
           </Box>
 
           <Box gridArea="video">
             <Img
-              fluid={data.allFile.edges[2].node.childImageSharp.fluid}
+              fluid={images.edges[1].node.childImageSharp.fluid}
               alt="Imagem do prédio do empreendimento"
             />
           </Box>
 
           <Box gridArea="facade" justify="end">
             <Img
-              fluid={data.allFile.edges[0].node.childImageSharp.fluid}
+              fluid={images.edges[0].node.childImageSharp.fluid}
               alt="Imagem do prédio do empreendimento"
             />
           </Box>
