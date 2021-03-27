@@ -5,7 +5,7 @@ import { StyledAnchor } from './Link.style';
 
 
 const Link = ({ linksColors, links, location }) => {
-	const hash = location.hash || '#home'
+	const hash = typeof location === undefined ? location.hash || '#home' : '#home'
 
 	return (
 		<>
