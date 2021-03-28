@@ -18,7 +18,8 @@ function SEO({ description, lang, meta, keywords, title }) {
           siteMetadata {
             title
             description
-            author
+            author,
+            googleSiteVerification
           }
         }
       }
@@ -38,6 +39,10 @@ function SEO({ description, lang, meta, keywords, title }) {
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          name: `google-site-verification`,
+          content: site.siteMetadata.googleSiteVerification,
         },
         {
           property: `og:title`,
@@ -82,7 +87,7 @@ function SEO({ description, lang, meta, keywords, title }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `pt-br`,
   meta: [],
   keywords: [],
 }

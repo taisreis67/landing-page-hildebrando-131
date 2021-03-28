@@ -1,6 +1,6 @@
 import React from "react"
-import { Helmet } from 'gatsby-plugin-react-helmet'
-import { useStaticQuery, graphql } from "gatsby"
+import PropTypes from "prop-types"
+import { graphql, useStaticQuery } from "gatsby"
 import { Grommet, grommet } from 'grommet'
 import { deepMerge } from "grommet/utils"
 
@@ -54,7 +54,6 @@ const Layout = ({ location, children }) => {
       site {
         siteMetadata {
           title
-          siteUrl
         }
       }
     }
@@ -63,26 +62,17 @@ const Layout = ({ location, children }) => {
   return (
     <Grommet theme={mainTheme}>
       <GlobalStyle />
-
-      <Helmet>
-          <meta charSet="utf-8" />
-          <meta name="description" content={data.site.siteMetadata.description} />
-          <meta name="keywords" content={data.site.siteMetadata.keywords} />
-          <meta name="robots" content="index, follow" />
-          <meta name="google-site-verification" content="lPPRsKAJ8o2Qe7dQq5XmgM5RlBOqQvMDIt5jk5eZX_k" />
-          <title>{data.site.siteMetadata.title}</title>
-          <link rel="canonical" href={data.site.siteMetadata.siteUrl} />
-      </Helmet>
-
       <Header background={colors.browm} color={colors.gold} siteTitle={data.site.siteMetadata.title} {...data}>
         <Link  linksColors={linksColors} links={links} location={location} />
       </Header>
-
       <main>{children}</main>
-
       <Footer background={colors.browm} color={colors.yellow} />
-    </Grommet>
+    </Grommet> 
   )
+}
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
 }
 
 export default Layout
