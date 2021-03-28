@@ -1,9 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Starter Landing Page`,
-    description: `A barebone landing page starter with some minimal styles.`,
-    author: `@gillkyle`,
-    siteUrl: `https://gatsby-starter-landing-page.netlify.com`,
+    title: `Hildebrando 131`,
+    description: `Empreendimneto Hildebrando 131, apartamentos para compra na avenida Hildebrando de Lima, Osasco - SP`,
+    keywords: `hildebrando de lima, apartamento, osasco, são paulo, imóveis, compra, investimeto em imóveis, minha casa minha vida, casa verde amarela, apartementos em osasco, direções imóveis`,
+    author: `@taisreis67`,
+    siteUrl: `https://www.hildebrando131.com/`,
+    googleSiteVerification: `lPPRsKAJ8o2Qe7dQq5XmgM5RlBOqQvMDIt5jk5eZX_k`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

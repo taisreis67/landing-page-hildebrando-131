@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import { Grommet, grommet } from 'grommet'
 import { deepMerge } from "grommet/utils"
 
@@ -48,29 +48,28 @@ const linksColors = {
   }
 }
 
-const Layout = ({ location, children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
+const Layout = ({ location, children }) => {
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
         }
       }
-    `}
-    render={data => (
-      <Grommet theme={mainTheme}>
-        <GlobalStyle />
-        <Header background={colors.browm} color={colors.gold} siteTitle={data.site.siteMetadata.title} {...data}>
-          <Link  linksColors={linksColors} links={links} location={location} />
-        </Header>
-        <main>{children}</main>
-        <Footer background={colors.browm} color={colors.yellow} />
-      </Grommet>
-    )}
-  />
-)
+    }
+  `)
+
+  return (
+    <Grommet theme={mainTheme}>
+      <GlobalStyle />
+      <Header background={colors.browm} color={colors.gold} siteTitle={data.site.siteMetadata.title} {...data}>
+        <Link  linksColors={linksColors} links={links} location={location} />
+      </Header>
+      <main>{children}</main>
+      <Footer background={colors.browm} color={colors.yellow} />
+    </Grommet> 
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
