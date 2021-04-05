@@ -44,21 +44,21 @@ const IndexPage = ({ data, location }) => {
     <Layout location={location}>
       <SEO />
 
-      <BannerImage image={apresentationImage} />
+      <BannerImage hash="home" image={apresentationImage} />
 
-      <SectionTitle title="Lazer" background={colors.browm} color={colors.gold} />
+      <SectionTitle hash="recreation" title="lazer" background={colors.browm} color={colors.gold} />
       <Carousel images={data.recreation} background={colors.darkBrowm} color={colors.beige} />
 
-      <SectionTitle title="Implantação" background={colors.browm} color={colors.gold} />
+      <SectionTitle hash="implementation" title="implantação" background={colors.browm} color={colors.gold} />
       <Implantation />
 
-      <SectionTitle title="Projeto" background={colors.browm} color={colors.gold} />
+      <SectionTitle hash="project" title="projeto" background={colors.browm} color={colors.gold} />
       <Project images={data.project} background={colors.browm} />
 
-      <SectionTitle title="Plantas" background={colors.browm} color={colors.gold} />
+      <SectionTitle hash="plans" title="plantas" background={colors.browm} color={colors.gold} />
       <Plans images={data.plans} colors={plansColors} content={contentPlans.content} />
 
-      <SectionTitle title="Tour Virtual" background={colors.browm} color={colors.gold} />
+      <SectionTitle hash="tour" title="tour virtual" background={colors.browm} color={colors.gold} />
       <Interactive background={colors.darkBrowm}>
         <iframe
           src="https://www.3dexplora.com.br/seutour.aspx?codigo=q5kYoNLfgYv&amp;play=0&amp;hl=0&amp;qs=1&amp;wh=1&amp;lp=0&amp;ts=1"
@@ -71,17 +71,18 @@ const IndexPage = ({ data, location }) => {
       </Interactive>
       
       <SectionTitle
-        title="Localização"
+        hash="location"
+        title="localização"
         subtitle="Av. Hildebrando de Lima, 131 - Km 18, Osasco - SP"
         background={colors.browm}
         color={colors.gold}
       />
       <BannerImage image={locationImage} />
 
-      <SectionTitle title="A facilidade de ter tudo ao seu lado" background={colors.browm} color={colors.gold} />
+      <SectionTitle hash="close" title="a facilidade de ter tudo ao seu lado" background={colors.browm} color={colors.gold} />
       <Carousel images={data.close} background={colors.beige} color={colors.darkBrowm} />
 
-      <SectionTitle title="Realização" background={colors.browm} color={colors.gold} />
+      <SectionTitle hash="realization" title="realização" background={colors.browm} color={colors.gold} />
       <CentralImage images={realizationImages} background={colors.white} />
     </Layout>
   )

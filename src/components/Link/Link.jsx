@@ -5,7 +5,7 @@ import { StyledAnchor } from './Link.style';
 
 
 const Link = ({ linksColors, links, location }) => {
-	const hash = typeof location === undefined ? location.hash || '#home' : '#home'
+	const hash = location ? location.hash : '#home'
 
 	return (
 		<>
@@ -16,7 +16,7 @@ const Link = ({ linksColors, links, location }) => {
 						color={linksColors.default.color}
 						direction="column"
 						href={url}
-						className={hash === url && 'active'}
+						className={hash === url ? 'active' : ''}
 						title={`link para a ${name}`}
 						alt={`link para a ${name}`}
 						a11yTitle={`link para a ${name}`}
