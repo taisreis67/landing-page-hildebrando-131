@@ -28,13 +28,13 @@ const mainTheme = deepMerge(grommet, {
 
 const links = [
   { name: 'Home', url: '#home' },
-  { name: 'Lazer', url: '#lazer' },
-  { name: 'Implantação', url: '#implatacao' },
-  { name: 'Projeto', url: '#projeto' },
+  { name: 'Lazer', url: '#recreation' },
+  { name: 'Implantação', url: '#implementation' },
+  { name: 'Projeto', url: '#project' },
   { name: 'Plantas', url: '#plans' },
   { name: 'Tour Virtual', url: '#tour' },
   { name: 'Localização', url: '#location' },
-  { name: 'Realização', url: '#realizacao' },
+  { name: 'Realização', url: '#realization' },
 ]
 
 const linksColors = {
@@ -63,7 +63,7 @@ const Layout = ({ location, children }) => {
     <Grommet theme={mainTheme}>
       <GlobalStyle />
       <Header background={colors.browm} color={colors.gold} siteTitle={data.site.siteMetadata.title} {...data}>
-        <Link  linksColors={linksColors} links={links} location={location} />
+        <Link linksColors={linksColors} links={links} location={location} />
       </Header>
       <main>{children}</main>
       <Footer background={colors.browm} color={colors.yellow} />
