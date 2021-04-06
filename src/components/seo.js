@@ -46,6 +46,10 @@ function SEO({ description, lang, meta, keywords, title }) {
           content: site.siteMetadata.googleSiteVerification,
         },
         {
+          name: `robots`,
+          content: `index, follow`,
+        },
+        {
           property: `og:title`,
           content: title,
         },
