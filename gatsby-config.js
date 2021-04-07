@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Hildebrando 131`,
-    description: `Empreendimneto Hildebrando 131, apartamentos para compra na avenida Hildebrando de Lima, Osasco - SP`,
-    keywords: `hildebrando de lima, apartamento, osasco, são paulo, imóveis, compra, investimeto em imóveis, minha casa minha vida, casa verde amarela, apartementos em osasco, direções imóveis`,
+    description: `Residencial Hildebrando 131 Lançamento | apartamentos para compra na Hildebrando de Lima, km 18, Osasco - SP perto da estação comandante Sampaio`,
+    keywords: `hildebrando de lima, apartamento, osasco, são paulo, imóveis, compra, investimeto em imóveis, minha casa minha vida, casa verde amarela, apartementos em osasco, direções imóveis, hildebrando 131 osasco`,
     author: `@taisreis67`,
     siteUrl: `https://hildebrando131.com`,
     googleSiteVerification: `lPPRsKAJ8o2Qe7dQq5XmgM5RlBOqQvMDIt5jk5eZX_k`
@@ -16,7 +16,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "G-GDPX5P6S4K",
+        trackingId: "UA-194177271-1",
       },
     },
     {
