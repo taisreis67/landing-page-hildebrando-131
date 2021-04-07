@@ -35,7 +35,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         lang,
       }}
       title={metaTitle}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`${site.siteMetadata.title} - Lançamento em Osasco`}
       meta={[
         {
           name: `description`,
