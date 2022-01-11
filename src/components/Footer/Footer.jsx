@@ -22,7 +22,7 @@ const Footer = ({ background, color }) => {
           />
 
           <Text
-            textAlign="left"
+            textAlign="start"
             alignSelf="center"
             margin={{ left: 'small'}}
             color="#fff"

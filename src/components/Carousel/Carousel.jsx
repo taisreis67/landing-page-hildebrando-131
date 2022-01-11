@@ -14,8 +14,9 @@ const Carousel = ({ images, background, color }) => {
           align="stretch"
           gap="medium"
         >
-          {images.edges.map(image => (
+          {images.edges.map((image, index) => (
             <Img
+              key={index}
               fluid={image.node.childImageSharp.fluid}
               alt={image.node.base.split(".")[0]}
             />
