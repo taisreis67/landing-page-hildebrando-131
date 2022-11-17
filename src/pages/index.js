@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from 'gatsby'
+import { datadogLogs, datadogRum } from '@datadog/browser-logs'
 
 import colors from '../styles/colors'
 import Layout from "../components/layout"
@@ -15,6 +16,19 @@ import contentPlans from "../content/plans.json"
 import CentralImage from "../components/CentralImage"
 
 const IndexPage = ({ data, location }) => {
+  if (typeof window !== "undefined") {
+    if (window.datadogLogs) {
+      window.datadogLogs.logger.info("Started inital page");
+      window.datadogLogs.logger.error("Error log test");
+    }
+
+    if (window.datadogRum) {
+      window.datadogRum.addError(new Error('My test error'), {
+        messageError: 'Error RUM test',
+      });
+    }
+  }
+
   const plansColors = {
     background: colors.beige,
     color: colors.browm
