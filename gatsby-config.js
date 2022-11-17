@@ -34,5 +34,20 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: "gatsby-plugin-datadog",
+      options: {
+        site: 'datadoghq.com',
+        sampleRate: 100,
+        enabled: true,
+        rum: {
+          applicationId: '3596864a-5622-4672-960c-8506d0306991',
+          clientToken: 'pubd736cd05f3c03c11522d859f64078474',
+        },
+        logs: {
+          clientToken: 'pubd736cd05f3c03c11522d859f64078474',
+        },
+      },
+    },
   ],
 }
